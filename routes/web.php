@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\KecamatanController;
+use App\Http\Controllers\Backend\SekolahController;
 use App\Http\Controllers\Frontend\PetaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -25,26 +26,25 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])
         ->name('dashboard');
 
-    // kecamatan
-    Route::get('kecamatan', [KecamatanController::class, 'index'])
-        ->name('kecamatan');
-    Route::get('kecamatan.data', [KecamatanController::class, 'data'])
-        ->name('kecamatan.data');
-    Route::get('kecamatan/tambah', [KecamatanController::class, 'tambah'])
-        ->name('kecamatan.tambah');
-    Route::post('kecamatan.simpan', [KecamatanController::class, 'simapan'])
-        ->name('kecamatan.simpan');
-    Route::get('kecamatan/edit/{id}', [KecamatanController::class, 'edit'])
-        ->name('kecamatan.edit');
-    Route::post('kecamatan.update', [KecamatanController::class, 'update'])
-        ->name('kecamatan.update');
-    Route::post('kecamatan.hapus', [KecamatanController::class, 'hapus'])
-        ->name('kecamatan.hapus');
+    Route::get('sekolah', [SekolahController::class, 'index'])
+        ->name('sekolah');
+    Route::get('sekolah.data', [SekolahController::class, 'data'])
+        ->name('sekolah.data');
+    Route::get('sekolah/tambah', [SekolahController::class, 'tambah'])
+        ->name('sekolah.tambah');
+    Route::post('sekolah.simpan', [SekolahController::class, 'simpan'])
+        ->name('sekolah.simpan');
+    Route::get('sekolah/edit/{id}', [SekolahController::class, 'edit'])
+        ->name('sekolah.edit');
+    Route::get('sekolah.update', [SekolahController::class, 'update'])
+        ->name('sekolah.update');
+    Route::post('sekolah.hapus', [SekolahController::class, 'hapus'])
+        ->name('sekolah.hapus');
 });
 
 Auth::routes();
 
 Route::get('peta', [PetaController::class, 'index'])
-->name('peta');
+    ->name('peta');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
