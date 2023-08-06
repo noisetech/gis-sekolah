@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\KecamatanController;
+use App\Http\Controllers\Frontend\PetaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -42,5 +43,8 @@ Route::prefix('dashboard')->group(function () {
 });
 
 Auth::routes();
+
+Route::get('peta', [PetaController::class, 'index'])
+->name('peta');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

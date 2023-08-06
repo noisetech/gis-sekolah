@@ -23,15 +23,15 @@ Table of contents
 12. portfolio
 
 --------------------------------------------- */
-/* 
+/*
 ---------------------------------------------
 font & reset css
---------------------------------------------- 
+---------------------------------------------
 */
-/* 
+/*
 ---------------------------------------------
 reset
---------------------------------------------- 
+---------------------------------------------
 */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
@@ -135,10 +135,10 @@ img {
   overflow: hidden;
 }
 
-/* 
+/*
 ---------------------------------------------
 global styles
---------------------------------------------- 
+---------------------------------------------
 */
 html,
 body {
@@ -282,10 +282,10 @@ body {
 }
 
 
-/* 
+/*
 ---------------------------------------------
 header
---------------------------------------------- 
+---------------------------------------------
 */
 
 .background-header {
@@ -782,10 +782,10 @@ header
   }
 }
 
-/* 
+/*
 ---------------------------------------------
 preloader
---------------------------------------------- 
+---------------------------------------------
 */
 
 .js-preloader {
@@ -884,10 +884,10 @@ preloader
 
 
 
-/* 
+/*
 ---------------------------------------------
 Banner Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .main-banner {
@@ -901,7 +901,7 @@ Banner Style
 
 .main-banner:after {
   content: '';
-  background-image: url(../images/slider-left-dec.png);
+  /* background-image: url(../images/slider-left-dec.png); */
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -954,10 +954,10 @@ Banner Style
   color: #fff !important;
 }
 
-/* 
+/*
 ---------------------------------------------
 Services Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .services {
@@ -978,7 +978,7 @@ Services Style
 
 .services:after {
   content: '';
-  background-image: url(../images/services-left-dec.png);
+  /* background-image: url(../images/services-left-dec.png); */
   background-repeat: no-repeat;
   position: absolute;
   left: 0;
@@ -1049,36 +1049,52 @@ Services Style
 }
 
 .first-service .icon {
-  background-image: url(../images/service-icon-01.png);
+  background-image: url(../../../img/logo/PpGLk5Bx9rKcxg0vrptWVI38YChfVO7QTH4Tql1K.svg);
+  background-size: 6vh;
+  background-repeat: no-repeat;
 }
 
 .first-service:hover .icon {
-  background-image: url(../images/service-icon-hover-01.png);
+  background-image: url(../../../img/logo/PpGLk5Bx9rKcxg0vrptWVI38YChfVO7QTH4Tql1K.svg);
+  background-size: 6vh;
+  background-repeat: no-repeat;
 }
 
 .second-service .icon {
-  background-image: url(../images/service-icon-02.png);
+    background-image: url(../../../img/logo/XsOElkis82PUQghqxuVxgnYTTDt1iSj3W2ZvpfhT.svg);
+    background-size: 6vh;
+    background-repeat: no-repeat;
 }
 
 .second-service:hover .icon {
-  background-image: url(../images/service-icon-hover-02.png);
+    background-image: url(../../../img/logo/XsOElkis82PUQghqxuVxgnYTTDt1iSj3W2ZvpfhT.svg);
+    background-size: 6vh;
+    background-repeat: no-repeat;
 }
 
 
 .third-service .icon {
-  background-image: url(../images/service-icon-03.png);
+    background-image: url(../../../img/logo/CYC2anz3SxkGyfjDnNO5giYgUSNiDxmCj2L76bhV.svg);
+    background-size: 6vh;
+    background-repeat: no-repeat;
 }
 
 .third-service:hover .icon {
-  background-image: url(../images/service-icon-hover-03.png);
+    background-image: url(../../../img/logo/CYC2anz3SxkGyfjDnNO5giYgUSNiDxmCj2L76bhV.svg);
+    background-size: 6vh;
+    background-repeat: no-repeat;
 }
 
 .fourth-service .icon {
-  background-image: url(../images/service-icon-04.png);
+    background-image: url(../../../img/logo/BCvYQuDnlYeKSea3uKMDBd2yWF57162HbBfaMmUl.svg);
+    background-size: 6vh;
+    background-repeat: no-repeat;
 }
 
 .fourth-service:hover .icon {
-  background-image: url(../images/service-icon-hover-04.png);
+    background-image: url(../../../img/logo/BCvYQuDnlYeKSea3uKMDBd2yWF57162HbBfaMmUl.svg);
+    background-size: 6vh;
+    background-repeat: no-repeat;
 }
 
 .service-item:hover {
@@ -1168,7 +1184,7 @@ About Us
 
 
 
-/* 
+/*
 ---------------------------------------------
 The Clients
 ---------------------------------------------
@@ -1313,7 +1329,7 @@ The Clients
 }
 
 
-/* 
+/*
 ---------------------------------------------
 The Clients
 ---------------------------------------------
@@ -1490,10 +1506,10 @@ The Clients
 
 
 
-/* 
+/*
 ---------------------------------------------
 Free Quote
---------------------------------------------- 
+---------------------------------------------
 */
 
 .free-quote {
@@ -1564,10 +1580,10 @@ Free Quote
 }
 
 
-/* 
+/*
 ---------------------------------------------
 Footer Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 footer {
@@ -1798,7 +1814,7 @@ a.btn_red {
 
 .social_login .icon {
   display: inline-block;
-  
+
   padding: 5px 10px;
   margin-right: 10px;
   float: left;
@@ -1938,10 +1954,10 @@ a.btn_red {
 
 
 
-/* 
+/*
 ---------------------------------------------
 responsive
---------------------------------------------- 
+---------------------------------------------
 */
 
 
@@ -1957,7 +1973,7 @@ responsive
   .header-area .main-nav .nav li:last-child {
     padding-left: 20px;
   }
-  
+
   .main-banner .left-content h2 {
     z-index: 2;
     position: relative;
@@ -1978,7 +1994,7 @@ responsive
   }
   .main-banner:after {
     display: none;
-  } 
+  }
   .main-banner .left-content h2 {
     color: #2a2a2a;
     margin-right: 0;
@@ -2116,7 +2132,7 @@ responsive
     background-color: #fff;
     color: #4b8ef1;
   }
-  footer #search input::placeholder { 
+  footer #search input::placeholder {
     color: #2a2a2a;
   }
   .header-area .main-nav .logo h4 {

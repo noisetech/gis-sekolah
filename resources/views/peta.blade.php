@@ -16,7 +16,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('fe/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" crossorigin="" />
     <!--
 
 TemplateMo 570 Chain App Dev
@@ -57,7 +57,7 @@ https://templatemo.com/tm-570-chain-app-dev
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="index.html" class="logo font-weight-bold" style="color: #000000;">
-                          GIS SEKOLAH BANDAR LAMPUNG
+                            GIS SEKOLAH BANDAR LAMPUNG
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -168,103 +168,8 @@ https://templatemo.com/tm-570-chain-app-dev
 
     <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-lg-6 align-self-center">
-                            <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s"
-                                data-wow-delay="1s">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <h1>Sistem Informasi Geografis <br> Sebaran Sekolah</h1>
-                                        <p class="mt-2">Sistem ini bertujuan untuk menampilkan sebaran sekolah yang ada di sekitar kota Bandar Lampung, sehingga nantinya membantu untuk mengetahui sekolah apa saja yang ada.</p>
-                                    </div>
+            <div id="map" style="height: 1000px; width: 100%">
 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                                <img src="{{ asset('fe/img/map2.jpg') }}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="services" class="services section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="service-item first-service">
-                        <div class="icon"></div>
-                        <h4>Pemeliharan sistem</h4>
-                        <p>Hal ini bertujuan untuk memastikan sistem berjalan dengan baik ketika digunakan.</p>
-
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="service-item second-service">
-                        <div class="icon"></div>
-                        <h4>Pemetaan Sebaran Sekolah</h4>
-                        <p>Hal ini bermaksud menampilkan sebaran sekolah yang ada di sekitar kota Bandar Lampung</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="service-item third-service">
-                        <div class="icon"></div>
-                        <h4>GIS SISTEM</h4>
-                        <p>Pengembangan sistem menggunakan Framework Laravel dan juga Leaflet</p>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div id="about" class="about-us section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 align-self-center">
-                    <div class="section-heading">
-                        <h4>Hal yang tersedia</h4>
-                        <img src="{{ asset('fe/assets/images/heading-line-dec.png') }}" alt="">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut
-                            labore et dolore magna.</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="box-item">
-                                <h4><a href="javascript:void(0)">Maintance Problems</a></h4>
-
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="box-item">
-                                <h4><a href="javascript:void(0)">24/7 Support &amp; Help</a></h4>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="box-item">
-                                <h4><a href="javascript:void(0)">Fixing Issues</a></h4>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="box-item">
-                                <h4><a href="javascript:void(0)"></a>Open Source</h4>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="right-image">
-                        <img src="{{ asset('fe/assets/images/about-right-dec.png') }}" alt="">
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -288,6 +193,9 @@ https://templatemo.com/tm-570-chain-app-dev
     </footer>
 
 
+
+
+
     <!-- Scripts -->
     <script src="{{ asset('fe/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('fe/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
@@ -296,6 +204,77 @@ https://templatemo.com/tm-570-chain-app-dev
     <script src="{{ asset('fe/assets/js/imagesloaded.js') }}"></script>
     <script src="{{ asset('fe/assets/js/popup.js') }}"></script>
     <script src="{{ asset('fe/assets/js/custom.js') }}"></script>
+
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" crossorigin=""></script>
+
+    <script src="{{ asset('js/catiline.js') }}"></script>
+    <script src="{{ asset('js/leaflet.shpfile.js') }}"></script>
+
+    <!-- Load Esri Leaflet from CDN -->
+    <script src="https://unpkg.com/esri-leaflet@^3.0.9/dist/esri-leaflet.js"></script>
+
+    <!-- Load Esri Leaflet Vector from CDN -->
+    <script src="https://unpkg.com/esri-leaflet-vector@4.0.0/dist/esri-leaflet-vector.js" crossorigin=""></script>
+
+    <script>
+        const apiKey =
+            "AAPK1e870c268e2549f284f11ae14cf4f6c39YnxtIdbL45x_N4e7A7C0TIHJhrC31ZvWAuFRffOZ1QNe7gtwAzifmZ9JFvujd03";
+
+        const gray = L.esri.Vector.vectorBasemapLayer("ArcGIS:Navigation", {
+            apiKey
+        });
+
+
+        var bagian_kecamatan = L.layerGroup();
+
+
+
+        const map = L.map('map', {
+            center: [-5.401213972218681, 105.26127758915212],
+            zoom: 10.5,
+            layers: [gray]
+        });
+
+
+
+        var baseLayers = {
+            "Default": gray,
+        }
+
+
+
+        const overlays = {
+            "Kecamatan": bagian_kecamatan,
+        };
+
+        L.control.layers(baseLayers, overlays).addTo(map);
+
+
+
+
+
+
+        var shp_kecamatan = new L.Shapefile('{{ asset('bahan-map/kecamatan.zip') }}', {
+            onEachFeature: function(feature, layer) {
+                if (feature.properties) {
+                    layer.bindPopup(Object.keys(feature.properties).map(function(k) {
+                        console.log(feature.properties.KECAMATAN);
+
+
+                        return k + ": " + feature.properties[k];
+                    }).join("<br />"), {
+                        maxHeight: 200
+                    });
+                }
+            }
+        });
+
+        shp_kecamatan.addTo(bagian_kecamatan);
+        shp_kecamatan.once("data:loaded", function() {
+            console.log("berhasil membaca zip shp pola_ruang");
+        });
+    </script>
 </body>
 
 </html>
